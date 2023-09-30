@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container d-flex flex-column align-items-center">
+			<div class="light-off"></div>
+			<!-- Start of Set Timer valuse -->
+			<div
+				class="setTimer position-absolute top-50 start-50 translate-middle z-3 bg-white rounded-3 shadow-lg p-5">
+				<button
+					class="close d-flex justify-content-center align-items-center position-absolute border border-1 p-2 rounded-circle">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						fill="currentColor"
+						class="bi bi-x-lg"
+						viewBox="0 0 16 16">
+						<path
+							d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+					</svg>
+				</button>
+				<form
+					action=""
+					class="d-flex flex-column align-items-center gap-3">
+					<div class="error text-danger p-1">
+						Please Enter valid values between 0 to 99
+					</div>
+					<div class="input-group d-flex gap-1 text-center">
+						<div>
+							<h5>Hours</h5>
+							<input
+								type="number"
+								class="form-control shadow-none border-secondary text-center"
+								name="hours"
+								id="hours"
+								min="0"
+								max="99"
+								value="00" />
+						</div>
+
+						<div>
+							<h5>Minutes</h5>
+							<input
+								type="number"
+								class="form-control shadow-none border-secondary text-center"
+								name="minutes"
+								id="minutes"
+								min="0"
+								max="99"
+								value="00" />
+						</div>
+						<div>
+							<h5>Seconds</h5>
+							<input
+								type="number"
+								class="form-control shadow-none border-secondary text-center"
+								name="seconds"
+								id="seconds"
+								min="0"
+								max="99"
+								value="00" />
+						</div>
+					</div>
+					<button
+						type="submit"
+						class="submit-btn btn btn-secondary">
+						Submit
+					</button>
+				</form>
+			</div>
+			<!-- End of Set Timer valuse -->
+			<div class="toggling-buttons d-flex justify-content-center w-100 p-3">
+				<div class="d-flex justify-content-center text-center">
+					<span></span>
+					<button
+						class="timer-btn btn border-0 rounded-end-0 text-center active">
+						Timer
+					</button>
+					<button
+						class="stopwatch-btn btn border-0 rounded-start-0 text-center">
+						Stopwatch
+					</button>
+				</div>
+			</div>
+			<!-- Start of Timer Section -->
+			<div
+				class="timer active flex-column align-items-center gap-2 position-absolute top-50 start-50 translate-middle">
+				<div class="position-relative">
+					<div class="time d-flex fs-1 gap-1">
+						<div class="hours">00</div>
+						<div class="colon">:</div>
+						<div class="minutes">00</div>
+						<div class="colon">:</div>
+						<div class="seconds">00</div>
+					</div>
+					<button
+						class="set btn btn-secondary position-absolute top-50 translate-middle-y">
+						Set
+					</button>
+				</div>
+				<div class="controls">
+					<button class="start-timer btn btn-secondary">Start</button>
+					<div>
+						<button class="continue-pause-timer btn btn-secondary">
+							Pause
+						</button>
+						<button class="reset-timer btn btn-secondary">Reset</button>
+					</div>
+				</div>
+			</div>
+			<!-- End of Timer Section -->
+			<!-- Start of Stopwatch Section -->
+			<div
+				class="stopwatch flex-column align-items-center gap-2 position-absolute top-50 start-50 translate-middle">
+				<div class="position-relative">
+					<div class="time d-flex fs-1 gap-1">
+						<div class="hours">00</div>
+						<div class="colon">:</div>
+						<div class="minutes">00</div>
+						<div class="colon">:</div>
+						<div class="seconds">00</div>
+					</div>
+				</div>
+				<div class="controls">
+					<button class="start-stopwatch btn btn-secondary">Start</button>
+					<div>
+						<button class="continue-pause-stopwatch btn btn-secondary">
+							Pause
+						</button>
+						<button class="reset-stopwatch btn btn-secondary">Reset</button>
+					</div>
+				</div>
+			</div>
+			<!-- End of Stopwatch Section -->
+		</div>
+		<script src="main.js"></script>
+		<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
